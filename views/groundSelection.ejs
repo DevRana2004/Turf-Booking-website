@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Ground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add your background image here */
+        body {
+            background-image: url('/public/images/cricket2.jpg'); /* Adjust the path */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full">
+        <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">Select Ground</h1>
+        <form action="/turf/bookSlot" method="POST" class="space-y-4">
+            <!-- Ground Selection -->
+            <div>
+                <label for="ground" class="block text-gray-600 font-semibold mb-2">Choose a Ground:</label>
+                <select id="ground" name="ground" required class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+                    <option value="Ground 1">Ground 1</option>
+                    <option value="Ground 2">Ground 2</option>
+                    <!-- Add more grounds as needed -->
+                </select>
+            </div>
+
+            <!-- Duration -->
+            <div>
+                <label for="duration" class="block text-gray-600 font-semibold mb-2">Duration (in hours):</label>
+                <input type="number" id="duration" name="duration" required class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+            </div> 
+
+            <!-- Booking Date -->
+            <div>
+                <label for="bookingDate" class="block text-gray-600 font-semibold mb-2">Date:</label>
+                <input type="date" id="bookingDate" name="bookingDate" required class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 transition duration-200">
+                    Book Slot
+                </button>
+            </div>
+        </form>
+        
+        <!-- Back to Dashboard Link -->
+        <p class="text-center mt-4">
+            <a href="/dashboard" class="text-blue-600 hover:text-blue-800 font-medium transition">Back to Dashboard</a>
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/public/images/pay2.jpg");
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #4285f4;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        .amount {
+            font-size: 24px;
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Pay</h1>
+        <img class="scanner-image" src="/public/images/pay.jpg" alt="Payment Scanner" style="width: 400px; height: auto;"> <!-- Set the width to 150px -->
+        
+        <!-- Additional Content -->
+        <div class="additional-content">
+            <h2>Welcome to Google Pay</h2>
+            <p>Thank you for choosing Google Pay for your payment needs. You can make secure and convenient payments using our platform.</p>
+            <p>Please scan the QR code with your Google Pay app to complete your payment.</p>
+        </div>
+    
+        <p class="amount">You have to pay: ₹<%= amount %></p> <!-- Display the payment amount -->
+        <p><a href="/">Back to Home</a></p>
+    </div>
+    
+</body>
+</html>

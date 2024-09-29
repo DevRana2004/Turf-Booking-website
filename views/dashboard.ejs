@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Turf Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: green;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+        }
+        
+        .grounds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .ground {
+            margin: 55px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 300px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .ground img {
+            max-width: 300px;
+            transition: 0.5s ease-in-out;
+            cursor: pointer; 
+        }
+
+        .grounds .ground:hover img {
+            transform: scale(1.2); 
+        }
+
+        .dev {
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .search h1 {
+            font-weight: 500;
+            color: #669933;
+        }
+
+        .search p {
+            font-family: inherit;
+        }
+
+        .payment-available-options ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .payment-available-options ul li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .aa {
+            background-color: rgb(67, 58, 58);
+            text-align: center;
+        }
+
+        .aa a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .aa i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Dashboard</h1>
+        <p>Welcome, <%= user.username %></p>
+    </header>
+
+    <nav>
+        <a href="/turf/groundSelection">Book a Turf</a>
+        <nav>
+            <a href="/auth/logout">Logout</a>
+        </nav>
+            </nav>
+
+    <div class="dev">
+        <img src="/public/images/img2.jpg" alt="Ground Image" width="80%" height="30%">
+    </div>
+
+    <div class="gray px-3">
+        <div class="search">
+            <h1>Featured Listing</h1>
+            <p>See & book your ground from the list of most popular grounds in your city</p>
+        </div>
+
+        <div class="grounds">
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=1"> <!-- Book a Turf for Ground 1 -->
+                    <img src="/public/images/img1.jpg" alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 1</h2>
+                <p>Location: Loni</p>
+                <a href="/turf/groundSelection?ground=1" class="btn btn-primary">Book a Turf</a>
+            </div>
+            
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=2"> <!-- Book a Turf for Ground 2 -->
+                    <img src="/public/images/img3.jpg"alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 2</h2>
+                <p>Location: Hadapsar</p>
+                <a href="/turf/groundSelection?ground=2" class="btn btn-primary">Book a Turf</a>
+            </div>
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=2"> <!-- Book a Turf for Ground 2 -->
+                    <img src="/public/images/img5.jpeg"alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 2</h2>
+                <p>Location: Hadapsar</p>
+                <a href="/turf/groundSelection?ground=2" class="btn btn-primary">Book a Turf</a>
+            </div>
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=2"> <!-- Book a Turf for Ground 2 -->
+                    <img src="/public/images/img6.jpg"alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 2</h2>
+                <p>Location: Hadapsar</p>
+                <a href="/turf/groundSelection?ground=2" class="btn btn-primary">Book a Turf</a>
+            </div>
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=2"> <!-- Book a Turf for Ground 2 -->
+                    <img src="/public/images/img7.jpeg"alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 2</h2>
+                <p>Location: Hadapsar</p>
+                <a href="/turf/groundSelection?ground=2" class="btn btn-primary">Book a Turf</a>
+            </div>
+            <div class="ground">
+                <a href="/turf/groundSelection?ground=2"> <!-- Book a Turf for Ground 2 -->
+                    <img src="/public/images/imgg.jpeg"alt="Ground 1">
+                </a>
+                <br><br>
+                <h2>Ground 2</h2>
+                <p>Location: Hadapsar</p>
+                <a href="/turf/groundSelection?ground=2" class="btn btn-primary">Book a Turf</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        &copy; 2023 Turf Booking
+    </footer>
+
+    <script>
+        var button = document.getElementById("redirectButton");
+
+        button.addEventListener("click", function() {
+            window.location.href = "request.html";
+        });
+    </script>
+</body>
+</html>
